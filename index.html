@@ -5,60 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Phoenix</title>
-    <link href="/CSS/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/CSS/favicon2.ico" rel="icon" type="image/x-icon" />
     <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
     <header>
+            <div id="logo">
+            <a href="index.html"><img src="css/cactuslogo.png" alt ="" /></a>
+            </div>
         <ul>
-            <li><a href="#About Us">About Us</a></li>
-            <li><a href="#Contact Us"><li>Contact Us</a></li>
+            <li><a href="#boxes">About Us</a></li>
+            <li><a href="#footer"><li>Contact Us</a></li>
             </ul>
     <div class="title">
         <h1>Welcome to Phoenix!</h1>
     </div>
     <div class="titlebuttons">
-        <button>Book Your Trip</button>
-        <button>Learn More</button>
+        <a href="#" class="gradient-button gradient-button-1">Book Your Trip</a>
+        <a href="#boxes" class="gradient-button gradient-button-1">Learn More</a>
     </div>
         </header>
     <div class="subtitle">
         <p class="text"><strong>Ready to explore the Grand Canyon State?!</strong></p>
     </div>
     <!-- 3 images -->
-    <div class="grid">
+    <div class="grid-container">
         <div class="images-a">
-    <div><img src="CSS/Bar Pic.jpg" height=250px width=250px alt=Bars!></div>
-    <div><button>Bars!</button></div>
+    <div><img src="CSS/Bar Pic.jpg" alt=Bars!></div>
+    <div class="gradient-button gradient-button-1">Bars!</div>
     </div>
     <div class="images-b">
-    <div><img src="CSS/football stadium.jpg" height=250px width=250px alt=Football></div>
+    <div><img src="CSS/football stadium.jpg" alt=Football></div>
+    <div class="gradient-button gradient-button-1">Sports!</div>
     </div>
-    <div><button>Sports!</button></body></div>
-
     <div class="images-c">
-    <div><img src="CSS/hiking.jpg" height=250px width=250px alt="Hiking"></div>
-    <div><button>Outdoor Fun!</button></div>
-    </div>
+    <div><img src="CSS/hiking.jpg" alt="Hiking"></div>
+    <div class="gradient-button gradient-button-1">Outdoor Fun!</div>
     </div>
 </div>
 
-
+<section id="contact">
 <form action="submission.html" method="POST">
     <h4>Enter you Email to Receive Updates:</h4>
-    <section class="email">
-    <label for="email">Email Address</label>
-    <input type="text" name="email" id="email">
-    <label for="phone number">Phone number</label>
-    <input type="number" name="number" id="number">
-    <input type="submit" value="Submit">
+    <form action="POST">
+    <br>
+    <input type="email" size="20" id="email" required>
+    <br>
+    <div class="gradient-button gradient-button-1">Get Updates</div>
     </form>
         </section>
     </div>
 
 </body>
-<hfooter>
-    <p>Thanks for visiting! <a href="https://www.linkedin.com/in/camry-leon/" target="_blank">LinkedIn</a> or my <a href="https://github.com/CoderCam4" target="_blank">GitHub</a></p>
+<footer>
+    <p>Thanks for visiting! Check out my <a href="https://www.linkedin.com/in/camry-leon/" target="_blank">LinkedIn</a> and <a href="https://github.com/CoderCam4" target="_blank">GitHub</a></p>
     <p> Developed by Camry | Generation USA Student | &copy; 2022 Copyright</p>
-</hfooter>
+</footer>
 </html>

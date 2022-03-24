@@ -1,93 +1,181 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 header {
     background-image: linear-gradient(rgba(241, 234, 234, 0.75),   rgba(245, 245, 245, 0.75)), url(phoenix\ background.jpg);
-    height: 100vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
 }
 
+#logo img {
+    margin-top: 5px;
+    margin-left: 15px;
+    float: left;
+    width: 75px;
+    height: auto;
+}
+
 ul {
-    float: right;
     list-style-type: none;
-    margin-top: 25px;
+    text-align: center;
 }
 
 ul li {
-    display: inline-block;
-    margin-right: 10px;
+    float: right;
+    height: 100%;
+    margin: 10px;
+    justify-content: space-between;
+    font-size: large;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 5px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
 }
 
 
 .title {
-position: absolute;
-top: 50%;
-left: 40%;
-transform: translate (-50%, -50%);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .title h1 {
-text-align: center;
-font-family: Poppins;
-font-weight: 500;
+font-family: Poppins, san-serif;
+font-weight: 800;
 color: orange;
-
 }
 
 .titlebuttons {
 position: absolute;
-top: 58%;
+top: 40%;
 left: 50%;
 transform: translate(-50%, -50%);
+margin: auto;
+justify-content: space-around;
+padding: 10px;
 }
 
-button:hover {
-background-color: orange;
-color: black;
+.btn {
+    border: 2px solid gray;
 }
 
 .subtitle {
-grid-column-start: 1;
-grid-column-end: 7;
+padding-top: 20px;
+padding-bottom: 40px;
 justify-items: center;
 display: grid; 
 font-family: Poppins;
 font-weight: 800; 
-color: black;
+color: orange;
 font-size: 30px;
+background-color: rgb(245, 240, 240);
 }
 
-.header li {
-float: right;
-height: 100%;
-margin: 20px;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-}
-
-.grid {
+.grid-container {
     display: grid;
-    grid-template: 200px 200px 200px / 200px 200px 200px;
-    gap: 10px;
+    grid-template-columns: repeat(3, 2fr); 
+    /*grid-template-columns: repeat(auto-fit, mixmax(500px, 3fr));*/
+    grid-template-rows: 400px;
     justify-content: center;
-    justify-items: center;
+    align-content: center;
+    height: auto;
+    background-color: rgb(245, 240, 240);
+    padding-bottom: 20px;
+    grid-auto-flow: dense;
+    overflow: hidden;
+    text-align: center;
 }
 
-button:hover {
-    background-color: orange;
-    color: black;
+.images-a {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-form, h4 {
-    display: grid;
-    grid-column: 1 / span 3;
-    grid-row: 6 / span 1;
+.images-b {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.images-c {
+    max-width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+.gradient-button {
+    margin: 10px;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgba(168, 119, 46, 0.555);
+    box-shadow: 0 0 20px rgba(177, 167, 26, 0.562);
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.gradient-button:hover {
+    background-color:rgba(240, 153, 23, 0.801);
+}
+
+footer {
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+    font-family: Poppins;
+    color: white;
+}
+
+form {
+    display: block;
+    padding-top: 40px;
+} 
+
+#contact {
+    background-color: rgb(245, 240, 240);
+    width: auto;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+input[type="email"] {
+    font-size: 20px;
+    color: #dd5e89;
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+@media only screen and (min-width: 550px) {
+    grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
